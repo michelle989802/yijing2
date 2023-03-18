@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>易经筹策法卜卦</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #F5DEB3;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #fff;
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #8B4513;
+        }
+        button {
+            font-size: 1rem;
+            padding: 10px 20px;
+            background-color: #8B4513;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>易经筹策法卜卦</h1>
+    <p>依据《易经·系辞上传·第九章》<br>
+    <p>天一地二，天三地四，天五地六，天七地八，天九地十。天数五地数五，五位相得而各有合。<br>
+    <p>天数二十有五，地数三十，凡天地之数，五十有五，此所以成变化而行鬼神也。</p>
+    <p>大衍之数五十，其用四十有九。分而为二以象两，挂一以象三，揲之以四以象四时，归奇於撝以象闰，故再撝而后挂。</p>
+    <p>乾之策，二百一十有六。坤之策，百四十有四。凡三百有六十当期之日。二篇之策，万有一千五百二十，当万物之数也。</p>
+    <p>是故，四营而成易，十有八变而成卦，八卦而小成。引而伸之，触类而长之，天下之能事毕矣。</p>
+    <p>显道神德行，是故可与酬酢，可与佑神矣。子曰：「知变化之道者，其知神之所为乎！」</p>
+    <button onclick="main()">开始卜卦</button>
+    <div id="result" class="result"></div>
+</div>
+
+<script>
+        let logs = [], res = [];
+        Yao = {7:"ShaoYang", 9:"LaoYang",8:"ShaoYin",6:"LaoYin"},
+        Change = {LaoYang:"ShaoYin", LaoYin:"ShaoYang"},
+        // 01阴阳
+        Gua = {"111111":"乾"  ,
+               "000000":"坤 乾卦的6个爻都是阳爻，所以叫做纯阳卦。如果一下子6个阳爻全部变成阴爻，那就变成纯阴卦，叫做坤卦。当我们观察乾卦时，我们会立即去看它的卦辞，发现它是元亨利贞。而坤卦呢，它的条件多了一点，是“元亨，利牝马之贞”。这就是它的限制。乾卦代表创造，你可以按照自己的想法去做。但坤卦是配合的，你必须有一个方向，一个目标，以及正确的方法。坤卦中的“牝马之贞”意味着你要像母马一样顺从。母马有一个特性，那就是它会永远跟随公马。为什么坤卦用马作为象征而不是牛呢？牛虽然顺从，但它可能会盲从；马则不同，它有原则，它忠贞不二，但会坚守原则。该跟随的时候它会跟随，不该跟随的时候它会坚定地拒绝。夫唱妇随并不意味着妇女要盲目地顺从丈夫。当丈夫的要求合理时，妇女会全力配合；而当要求不合理时，她们有权拒绝。这才是真正的夫唱妇随。然而，现在很多人计较功劳，只关注自己的贡献，忽视了那些看不见的付出。我们要理解，在家庭中，夫妻双方都有自己的角色和责任，共同为家庭的和谐与幸福努力。乾坤配中，领导需要有人执行，执行需要有良好的领导。坤卦的卦词在“元亨利聘马之争”后面有一段话，叫做“君子有终始”。这意味着一个君子在决定前进的方向时，要记住先找到正确的领导。如果你身处坤元，没有乾元的引导，你可能会迷失方向。而当你找到乾元，并确认其正确可靠时，跟随他会让你受益。“西南得鹏，东北藏鹏”的卦词中，就是要找到志同道合的朋友，但是同时也要注意，有志同道合的人就一定会有人跟你唱反调。你要敬而远之，保持安全距离，这样才好。“安贞疾”。安贞的意思是反省自己，够不够柔顺。如果你是坤卦，又不够柔顺，又想强出头，那你迟早会走向失败。因此，你要学会反省自己，适时地表现柔顺。乾卦的象征是天行健，君子以自强不息。不仅要刚强，还要持久，才能算得上是真正的天行健。天有其运动，地有其地势。中国人常说：“行事比人强。”许多人认为自己有能力，其实是行事在帮助你。所以中国人要感谢天地。君子应当向地学习厚德载物，地虽然不说话，却承载了万物。刚柔并济，内外配合，这样才能掌握真正的道义。天很公正无私，所以君子也应该想到，我应该怎么样？肚量要宽广，能帮人家忙，我尽量不要计较。他看到地的厚德载物，他就会想到什么？我有责任使每件东西都各安其位。所以我要有地盘，我也想到别人要有地盘，我尽量扩大我的地盘，我要想想别人的感受怎么样。这样一来，你就拥有天地的美德，时时刻刻都知道可进财进当位，当退就要退。初六的爻池它提醒我们要注意防范问题。警觉性高和怀疑心重是相互关联的，要防患于未然，预先防范，不要到时候才后悔。六二爻辞中提到地的本性，它广大无边。我们人与人之间的关系要出于自然、真诚。而不是依赖学习的礼仪，如鞠躬、握手、给人搬椅子等。真诚的礼貌是由内心发出的，不能装作。当你面对不同的人时，你的微笑和亲切程度也会有所不同，因为人与人的关系不一样，感觉也不一样。坤卦的第三爻，含章可争，祸从王室，无尘有终。含意味着你不急于把话说出来，不急于把优点都展示出来，把你的内涵、优美的品质都含蓄地展现出来。人家自然会欣赏。一个人的内涵比外在的表现要重要。不要把所有优点都暴露出来。有些人一开始看起来不起眼，但随着时间的推移，你会发现他们就像一座宝藏，挖掘的过程永无止境。六三爻描述了一个进退两难的场景。当老板的命令看似不合理时，你应该如何应对？这个时候，你可以仔细了解情况，找适当的机会向老板反馈。如果老板坚持要你这样做，你就在合法范围内去完成任务。这才叫做含章可争。这个人有内涵，不是为了表功，为了得到老板的信任，而不顾合理与否，盲目地去做。这个盲目的顺从是最不负责任的 ,你看我们为什么不用牛 ,我们用马就是牛 ,他是有点盲目的服从 ,叫他做什么他就做什么 ,马不一样 ,马看你这人不对他照样把你甩下来 ,叫做立聘马之争 合理的顺从才是真正的含章可争。只要认真地完成老板交代的事情，不要因为获得一个小小的奖品就沾沾自喜。要有更远大的目标和抱负。老板称赞你时，也不要马上飞上天，否则老板会开始修理你，因为他觉得你不能捧得太高。瀑布冷水也是你自作自受。在职场中，一个人应该在得到上级赏识时恒守中道，学会保守秘密，面对请托时要有自己的原则。在第六爻时期，要谨言慎行、少惹事，同时关心他人。坤卦第五爻告诉我们要忠诚于上级，善于协调。面对矛盾和冲突时要小心处理，避免两败俱伤的局面。追求上进的最安全方法是修养自己的品德，而非一味追求地位和权力。"  ,
+               "100010":"屯", "010001":"蒙" , "111010":"需"  , "010111":"讼", "010000":"师", "000010":"比",
+               "111011":"小畜", "110111":"履"  , "111000":"泰", "000111":"否" , "101111":"同人", "111101":"大有", "001000":"谦", "000100":"豫",
+               "100110":"随"  , "011001":"蛊"  , "110000":"临", "000011":"观" , "100101":"噬嗑", "101001":"贲", "000001":"剥", "100000":"复",
+               "100111":"无妄", "111001":"大畜", "100001":"颐", "011110":"大过", "010010":"坎"  , "101101":"离", "001110":"咸", "011100":"恒",
+               "001111":"遁"  , "111100":"大壮", "000101":"晋", "101000":"明夷", "101011":"家人", "110101":"睽", "001010":"蹇", "010100":"解",
+               "110001":"损"  , "100011":"益"  , "111110":"夬", "011111":"姤" , "000110":"萃"  , "011000":"升", "010110":"困", "011010":"井",
+               "101110":"革"  , "011101":"鼎"  , "100100":"震", "001001":"艮" , "001011":"渐"  , "110100":"归妹", "101100":"丰", "001101":"旅",
+               "011011":"巽"  , "110110":"兑"  , "010011":"涣", "110010":"节" , "001100":"中孚", "110011":"小过", "101010":"即济", "010101":"未济"},
+        JIE= {},
+        // 返回
+        getYinYang = function(num){
+            // let res = [];
+            // if(num %3 == 0) return [0,1]//todo
+            return num % 2;
+        },
+        getYao = function(i, num){
+            let res = 0, sum = 49, left = num, Mod1, Mod2;
+            Mod1 = formatInput(left%4) + 1 + formatInput((sum-left-1)%4);
+            sum -= Mod1;
+            //请冥思
+            left = prompt(i + ". 再-数字范围 0-"+sum)*1;
+            if(left == undefined) return undefined;
+                logs[logs.length - 1].push(left);
+            Mod2 = formatInput(left%4) + 1 + formatInput((sum-left-1)%4);
+            sum -= Mod2;
+            //请再三冥思
+            left = prompt(i + ". 叁-数字范围 0-"+sum)*1;
+            if(left == undefined) return undefined;
+                logs[logs.length - 1].push(left);
+            return parseInt(left/4) + parseInt((sum-left-1)/4);
+        },
+        formatInput = function(mod){
+            return mod == 0? 4: mod;
+        },
+        getGua = function(arr){
+            return Gua[arr.join("")];
+        },
+        //1 getYao 2 getYY 3 累积阴阳 复挂100000
+        main = function(){
+            logs.push([]);
+            let thisYao = [], thisGua = [];
+            for(let i = 1; i < 7; i++){
+                let inputRaw = prompt(i + ". 壹-数字范围 0-49");
+                if(inputRaw == undefined) return undefined;
+                logs[logs.length - 1].push(inputRaw*1);
+                let y = getYao(i, inputRaw*1);
+                if(y == undefined) return undefined;
+                thisYao.push(y);
+                thisGua.push(y%2);
+            }
+            let thisRes = "此次卜卦结果，主卦是：" + getGua(thisGua)+". ";
+            let changeGua = [];
+            for(let i in thisYao){
+                changeGua[i] = (thisYao[i] == 6 || thisYao[i] == 9)? (1 - thisGua[i]) :  thisGua[i];
+            }
+            if(getGua(thisGua) !== getGua(changeGua)){
+                thisRes += "变卦是：" + getGua(changeGua) + ".";
+            }
+            res.push(thisRes);
+            console.log("此次卜卦记录：", logs[logs.length - 1]);
+            console.log("卜卦结果：", thisRes);
+            alert(thisRes);
+            displayResult(thisRes);
+        };
+
+        function displayResult(text) {
+            const resultDiv = document.getElementById('result');
+            const textWrapper = document.createElement('p');
+            textWrapper.innerText = text;
+            resultDiv.appendChild(textWrapper);
+            resultDiv.scrollTop = resultDiv.scrollHeight;
+        }
+
+    </script>
+</body>
+</html>
